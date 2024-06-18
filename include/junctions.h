@@ -25,7 +25,7 @@
 #define JUNCTIONS_H_
 
 #include <vector>
-#include "./util.h"
+#include "util.h"
 
 namespace soax {
 class SnakeTipSet;

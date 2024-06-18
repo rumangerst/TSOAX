@@ -5,8 +5,8 @@
 #include <tuple>
 #include <algorithm>
 #include <iostream>
-#include "./util.h"
-#include "./Coordinate.h"
+#include "util.h"
+#include "coordinate.h"
 
 namespace soax {
     

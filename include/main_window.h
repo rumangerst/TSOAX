@@ -28,8 +28,7 @@
 class QProgressBar;
 class QScrollBar;
 class QActionGroup;
-class QVTKWidget;
-class QVTKOpenGLWidget;
+class QVTKOpenGLStereoWidget;
 
 namespace soax {
 class ImageReader;
@@ -208,7 +207,7 @@ class MainWindow : public QMainWindow {
   QScrollBar *scroll_bar_;
   QProgressBar *progress_bar_;
 
-  QVTKOpenGLWidget *qvtk_ = nullptr;
+  QVTKOpenGLStereoWidget *qvtk_ = nullptr;
 
   size_t track_examined_ = 0;
   size_t stepsize_ = 0;

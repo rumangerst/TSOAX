@@ -23,7 +23,7 @@
 #ifndef INTERPOLATOR_H_
 #define INTERPOLATOR_H_
 
-#include "./util.h"
+#include "util.h"
 
 class vtkImageData;
 class vtkImageInterpolator;

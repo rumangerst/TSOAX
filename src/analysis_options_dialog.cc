@@ -27,6 +27,8 @@
 #include <QFormLayout>
 #include <QPushButton>
 
+#include "include/moc_analysis_options_dialog.cpp"
+
 namespace soax {
 AnalysisOptionsDialog::AnalysisOptionsDialog(QWidget *parent) :
     QDialog(parent) {

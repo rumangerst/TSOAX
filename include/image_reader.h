@@ -32,7 +32,7 @@
 #include <QString>  // NOLINT
 #include <QStringList>  // NOLINT
 #include <QSet>  // NOLINT
-#include "./util.h"
+#include "util.h"
 
 class vtkImageData;
 

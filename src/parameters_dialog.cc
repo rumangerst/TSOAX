@@ -29,6 +29,8 @@
 #include <QFormLayout>
 #include "include/snake_parameters.h"
 
+#include "include/moc_parameters_dialog.cpp"
+
 namespace soax {
 
 ParametersDialog::ParametersDialog(QWidget *parent) : QDialog(parent) {

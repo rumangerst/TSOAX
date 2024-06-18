@@ -22,7 +22,7 @@
 
 #include <QApplication>
 #include "include/main_window.h"
-#include "QVTKOpenGLWidget.h"
+#include "QVTKOpenGLStereoWidget.h"
 #include "vtkGenericOpenGLRenderWindow.h"
 
 int main(int argc, char **argv) {
@@ -30,7 +30,7 @@ int main(int argc, char **argv) {
   vtkOpenGLRenderWindow::SetGlobalMaximumNumberOfMultiSamples(0);
 #endif
 
-  QSurfaceFormat::setDefaultFormat(QVTKOpenGLWidget::defaultFormat());
+  QSurfaceFormat::setDefaultFormat(QVTKOpenGLStereoWidget::defaultFormat());
   QApplication app(argc, argv);
 
 #ifdef __APPLE__

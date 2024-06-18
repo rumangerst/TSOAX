@@ -23,7 +23,7 @@
 #ifndef SNAKE_TIP_H_
 #define SNAKE_TIP_H_
 
-#include "./util.h"
+#include "util.h"
 
 class Snake;
 

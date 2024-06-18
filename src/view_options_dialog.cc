@@ -27,6 +27,8 @@
 #include <QVBoxLayout>
 #include <QLabel>
 
+#include "include/moc_view_options_dialog.cpp"
+
 namespace soax {
 
 ViewOptionsDialog::ViewOptionsDialog(QWidget *parent) : QDialog(parent) {

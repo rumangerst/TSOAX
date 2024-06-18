@@ -11,6 +11,7 @@
 #include <sstream>
 #include <iomanip>
 #include <omp.h>
+#include <fstream>
 #include "boost/program_options.hpp"
 #include "boost/filesystem.hpp"
 #include "include/multisnake.h"

@@ -27,11 +27,10 @@
 #include <vector>
 #include <string>
 #include <QObject>  // NOLINT
-#include "./viewpoint.h"
-#include "./util.h"
+#include "viewpoint.h"
+#include "util.h"
 
-class QVTKWidget;
-class QVTKOpenGLWidget;
+class QVTKOpenGLStereoWidget;
 class vtkGenericOpenGLRenderWindow;
 class vtkRenderer;
 class vtkOrientationMarkerWidget;
@@ -52,7 +51,7 @@ class Viewer : public QObject {
   Q_OBJECT
 
  public:
-  explicit Viewer(QVTKOpenGLWidget *qvtk);
+  explicit Viewer(QVTKOpenGLStereoWidget *qvtk);
 
   ~Viewer();
 
@@ -221,7 +220,7 @@ class Viewer : public QObject {
   void RemovePointActor(JunctionActor *actor);
   void SetupPointActor(JunctionActor **actor, const PointContainer &points);
 
-  QVTKOpenGLWidget *qvtk_ = nullptr;
+  QVTKOpenGLStereoWidget *qvtk_ = nullptr;
   vtkGenericOpenGLRenderWindow *window_ = nullptr;
   vtkRenderer *renderer_;
 

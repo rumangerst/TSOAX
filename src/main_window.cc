@@ -32,7 +32,7 @@
 #include <QMessageBox>
 #include <QVBoxLayout>
 #include <QInputDialog>
-#include "QVTKOpenGLWidget.h"
+#include "QVTKOpenGLStereoWidget.h"
 
 #include "include/util.h"
 #include "include/image_reader.h"
@@ -53,10 +53,12 @@
 // #include "include/osx_helper.h"
 // #endif
 
+#include "include/moc_main_window.cpp"
+
 namespace soax {
 
 MainWindow::MainWindow() {
-  qvtk_ = new QVTKOpenGLWidget(this);
+  qvtk_ = new QVTKOpenGLStereoWidget(this);
 
   reader_ = new ImageReader;
   viewer_ = new Viewer(qvtk_);

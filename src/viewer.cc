@@ -24,8 +24,7 @@
 #include <sstream>
 #include <QFileInfo>
 #include <QString>
-#include "QVTKWidget.h"
-#include "QVTKOpenGLWidget.h"
+#include "QVTKOpenGLStereoWidget.h"
 #include "QVTKInteractor.h"
 #include "vtkRenderer.h"
 #include "vtkImageData.h"
@@ -47,9 +46,11 @@
 #include "include/junction_actor.h"
 #include "include/actor_color.h"
 
+#include "include/moc_viewer.cpp"
+
 namespace soax {
 
-Viewer::Viewer(QVTKOpenGLWidget *qvtk) : qvtk_(qvtk), renderer_(vtkRenderer::New()),
+Viewer::Viewer(QVTKOpenGLStereoWidget *qvtk) : qvtk_(qvtk), renderer_(vtkRenderer::New()),
                                    slot_connector_(vtkEventQtSlotConnect::New()),
                                    picker_(vtkPointPicker::New()),
                                    snapshot_path_("..") {

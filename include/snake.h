@@ -28,8 +28,8 @@
 #include <utility>
 #include "eigen3/Eigen/SparseCore"
 #include "eigen3/Eigen/SparseCholesky"
-#include "./util.h"
-#include "./grid.h"
+#include "util.h"
+#include "grid.h"
 
 
 namespace soax {

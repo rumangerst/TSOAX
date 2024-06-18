@@ -23,7 +23,7 @@
 #define SNAKE_ACTOR_H_
 
 #include <map>
-#include "./util.h"
+#include "util.h"
 
 class vtkActor;
 class vtkPolyData;
