@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.12)
 
 project(TSOAX)
 
@@ -87,7 +87,7 @@ src/viewpoint.cc
 src/volume_rendering.cc)
 
 if (APPLE)
-  set(ICON_FOLDER ../icon)
+  set(ICON_FOLDER icon)
   set(ICON_NAME troax.icns)
   set(ICON_FILE ${ICON_FOLDER}/${ICON_NAME})
   set_source_files_properties(${ICON_FILE} PROPERTIES
@@ -103,7 +103,7 @@ if (APPLE)
   set(MACOSX_BUNDLE_COPYRIGHT ${COPYRIGHT})
   set(MACOSX_BUNDLE_GUI_IDENTIFIER ${IDENTIFIER})
   set(MACOSX_BUNDLE_ICON_FILE ${ICON_NAME})
-  add_executable(tsoax_gui MACOSX_BUNDLE ${SRC_SHARED} ${SRC_GUI} icons.qrc
+  add_executable(tsoax_gui MACOSX_BUNDLE ${SRC_SHARED} ${SRC_GUI} src/icons.qrc
     ${ICON_FILE})
   set_target_properties(tsoax_gui PROPERTIES MACOSX_BUNDLE_INFO_PLIST
     ${CMAKE_SOURCE_DIR}/TroaxBundleInfo.plist.in)
