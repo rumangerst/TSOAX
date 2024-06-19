@@ -122,7 +122,7 @@ int main(int argc, char **argv) {
           
           
           // suppress output as in https://stackoverflow.com/questions/30184998/how-to-disable-cout-output-in-the-runtime
-          std::cout.setstate(std::ios_base::failbit);
+          // std::cout.setstate(std::ios_base::failbit);
               
           // can this loop be made parallel? would need individual readers and multisnake to be defined in this loop
           #pragma omp parallel for schedule(dynamic, 1)
@@ -131,9 +131,9 @@ int main(int argc, char **argv) {
         
                #pragma omp critical
                 {
-                    std::cout.clear();
+                    // std::cout.clear();
                     std::cout << "Analyzing: " << subfolder.string() << std::endl;
-                    std::cout.setstate(std::ios_base::failbit);
+                    // std::cout.setstate(std::ios_base::failbit);
                 }
                 
                if (fs::is_directory(subfolder)) {
