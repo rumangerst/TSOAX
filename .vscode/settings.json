@@ -5,5 +5,6 @@
         "*.json5": "jsonc",
         "*.h": "cpp",
         "qpushbutton": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": true
 }
