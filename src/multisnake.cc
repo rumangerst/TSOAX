@@ -21,6 +21,7 @@
 #include "include/multisnake.h"
 #include <iostream>
 #include <limits>
+#include <chrono>
 #include <QApplication>
 #include "vtkImageData.h"
 #include "include/gradient_calculator.h"
@@ -280,6 +281,9 @@ void Multisnake::Evolve() {
   SnakeContainer converged;
   
   converged_snakes_grid_two_.clearGrid();
+
+  auto startTime = std::chrono::steady_clock::now();
+  auto lastUpdateTime = startTime;
   
   while (!initial_snakes_.empty()) {
     Snake *snake = initial_snakes_.back();
@@ -310,8 +314,13 @@ void Multisnake::Evolve() {
       ncompleted = 0;
     emit ExtractionProgressed(ncompleted);
     qApp->processEvents();
-    std::cout << "\rRemaining: " << std::setw(6)
-              << initial_snakes_.size() << std::endl;
+
+    auto currentTime = std::chrono::steady_clock::now();
+    std::chrono::duration<double> elapsedTime = currentTime - lastUpdateTime;
+    if (elapsedTime.count() >= 1.0) {
+      std::cout << "Evolving snakes ... remaining: " << std::setw(6) << initial_snakes_.size() << std::endl;
+      lastUpdateTime = currentTime;
+    }
   }
 
   std::cout << "\n# converged snakes: " << converged.size()
