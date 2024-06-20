@@ -311,7 +311,7 @@ void Multisnake::Evolve() {
     emit ExtractionProgressed(ncompleted);
     qApp->processEvents();
     std::cout << "\rRemaining: " << std::setw(6)
-              << initial_snakes_.size() << std::flush;
+              << initial_snakes_.size() << std::endl;
   }
 
   std::cout << "\n# converged snakes: " << converged.size()

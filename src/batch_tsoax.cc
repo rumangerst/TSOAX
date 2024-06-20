@@ -218,7 +218,7 @@ int main(int argc, char **argv) {
             }
             
             // re-enable output
-            std::cout.clear();
+            // std::cout.clear();
             std::cout << "Finished batch job" << std::endl;
         }
 
