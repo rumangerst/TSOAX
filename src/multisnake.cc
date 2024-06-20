@@ -284,6 +284,8 @@ void Multisnake::Evolve() {
 
   auto startTime = std::chrono::steady_clock::now();
   auto lastUpdateTime = startTime;
+
+  std::cout << "Evolving snakes ... remaining: " << std::setw(6) << initial_snakes_.size() << std::endl;
   
   while (!initial_snakes_.empty()) {
     Snake *snake = initial_snakes_.back();
