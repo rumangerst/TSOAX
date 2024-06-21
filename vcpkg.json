@@ -1,0 +1,11 @@
+{
+  "dependencies": [
+    "boost",
+    "qt5",
+    {
+      "name": "vtk",
+      "features": ["qt", "opengl"]
+    }
+  ],
+  "builtin-baseline": "65521f7dc3701c25d72ecc544f798198b9a4aa33"
+}

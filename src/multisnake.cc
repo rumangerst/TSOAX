@@ -1114,7 +1114,7 @@ void Multisnake::ComputeCurveDistanceMatrix(double **distance_matrix,
   int criteria = (int)ceil(log(threshold) / c);
   
   #pragma omp parallel for
-  for (size_t i = 0; i < converged_snake_sequence_.size() - 1; i++) {
+  for (long i = 0; i < converged_snake_sequence_.size() - 1; i++) {
     //Grid snakeGridTimeI = converged_snake_grid_sequence_[i];
     for (size_t j = i + 1; j < converged_snake_sequence_.size(); j++) {
       //Grid snakeGridTimeJ = converged_snake_grid_sequence_[j];

@@ -12,7 +12,7 @@ int_t _ccrrt_dense(const uint_t n, cost_t *cost[],
                      int_t *free_rows, int_t *x, int_t *y, cost_t *v)
 {
     int_t n_free_rows;
-    boolean *unique;
+    lapjv_boolean *unique;
 
     for (uint_t i = 0; i < n; i++) {
         x[i] = -1;
@@ -31,7 +31,7 @@ int_t _ccrrt_dense(const uint_t n, cost_t *cost[],
     }
     PRINT_COST_ARRAY(v, n);
     PRINT_INDEX_ARRAY(y, n);
-    NEW(unique, boolean, n);
+    NEW(unique, lapjv_boolean, n);
     memset(unique, TRUE, n);
     {
         int_t j = n;
@@ -89,7 +89,7 @@ int_t _carr_dense(
         int_t i0;
         int_t j1, j2;
         cost_t v1, v2, v1_new;
-        boolean v1_lowers;
+        lapjv_boolean v1_lowers;
 
         rr_cnt++;
         PRINTF("current = %d rr_cnt = %d\n", current, rr_cnt);

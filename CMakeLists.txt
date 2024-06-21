@@ -113,6 +113,6 @@ endif (APPLE)
 
 add_executable(tsoax ${SRC_SHARED} src/batch_tsoax.cc )
 
-target_link_libraries(tsoax ${VTK_LIBRARIES} ${Boost_PROGRAM_OPTIONS_LIBRARY} ${Boost_FILESYSTEM_LIBRARY} ${Boost_SYSTEM_LIBRARY} OpenMP::OpenMP_CXX)
-target_link_libraries(tsoax_gui Qt5::Widgets ${VTK_LIBRARIES} OpenMP::OpenMP_CXX)
+target_link_libraries(tsoax Qt5::Core ${VTK_LIBRARIES} ${Boost_PROGRAM_OPTIONS_LIBRARY} ${Boost_FILESYSTEM_LIBRARY} ${Boost_SYSTEM_LIBRARY} OpenMP::OpenMP_CXX)
+target_link_libraries(tsoax_gui Qt5::Widgets ${VTK_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY} ${Boost_SYSTEM_LIBRARY} OpenMP::OpenMP_CXX)
 

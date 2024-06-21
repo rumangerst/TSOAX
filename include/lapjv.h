@@ -55,7 +55,7 @@
 typedef signed int int_t;
 typedef unsigned int uint_t;
 typedef double cost_t;
-typedef char boolean;
+typedef char lapjv_boolean;
 typedef enum fp_t { FP_1 = 1, FP_2 = 2, FP_DYNAMIC = 3 } fp_t;
 
 extern int_t lapjv_internal(
