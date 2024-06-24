@@ -5,7 +5,14 @@
             "name": "default",
             "inherits": "vcpkg",
             "environment": {
-                "VCPKG_ROOT": "E:/src/vcpkg"
+                "VCPKG_ROOT": "/Users/admin_asb/src/vcpkg"
+            }
+        },
+        {
+            "name": "default",
+            "inherits": "vcpkg-macos",
+            "environment": {
+                "VCPKG_ROOT": "/Users/admin_asb/src/vcpkg"
             }
         }
     ]

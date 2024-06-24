@@ -13,6 +13,33 @@
             "environment": {
                 "VCPKG_ROOT": "E:/src/vcpkg"
             }
+        },
+        {
+            "name": "vcpkg-macos",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_CONFIGURATION_TYPES": "Release",
+                "CMAKE_MAKE_PROGRAM": "/usr/bin/make",
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++"
+            },
+            "environment": {
+                "VCPKG_ROOT": "/Users/admin_asb/src/vcpkg",
+                "OpenMP_ROOT": "/opt/homebrew/opt/libomp"
+            }
+        },
+        {
+            "name": "homebrew",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "VTK_DIR": "/Users/admin_asb/src/VTK-9.3.0/build",
+                "OpenMP_ROOT": "/opt/homebrew/opt/libomp/"
+            }
         }
     ],
     "buildPresets": [
